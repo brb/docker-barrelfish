@@ -6,7 +6,8 @@ This repository contains Docker image for building and running
 ## Bootstrapping container
 
 First of all, the image has to be built or fetched from
-[hub.docker.org](http://todo) with `make build` or `make pull` respectively.
+[hub.docker.org](https://registry.hub.docker.com/u/brb0/barrelfish/)
+with `make build` or `make pull` respectively.
 
 Next, a container has to be created from the image.
 `make create SRC_PATH=... BUILD_PATH=...` will do the job. `SRC_PATH`

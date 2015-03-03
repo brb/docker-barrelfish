@@ -9,7 +9,8 @@ build: Dockerfile
 	$(DOCKER) build -t $(IMAGE_NAME) .
 
 pull:
-	$(DOCKER) pull $(MAINTAINER):$(IMAGE_NAME)
+	$(DOCKER) pull $(MAINTAINER)/$(IMAGE_NAME)
+	$(DOCKER) tag $(MAINTAINER)/$(IMAGE_NAME) $(IMAGE_NAME)
 
 create:
 ifneq ($(and $(BUILD_PATH),$(SRC_PATH)),)
