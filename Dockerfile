@@ -66,5 +66,8 @@ RUN rm -fr "cabal-install-$CABAL_VERSION" cabal.tar.gz
 
 RUN apt-get install -y cpio qemu
 RUN apt-get purge -y --auto-remove curl gcc g++ wget
+RUN apt-get install -y gdb tmux
+
+COPY tmux.conf /root/.tmux.conf
 
 CMD ["/bin/bash"]
